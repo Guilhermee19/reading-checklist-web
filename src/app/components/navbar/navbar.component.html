@@ -1,0 +1,28 @@
+<!-- <mat-toolbar>
+    <strong>
+        <icon name="menu" (click)="drawer.toggle()"></icon>
+    </strong>
+</mat-toolbar> -->
+
+<mat-drawer-container class="navbar_left">
+    <mat-drawer #drawer class="options" mode="side" [opened]="true">
+        <aside>
+            <header>
+                <figure> <img src="https://scontent-gig2-1.xx.fbcdn.net/v/t39.30808-6/285632674_4902266709884893_8427727136781353135_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEzHVatzucKzWJ9hzozYzBEU_eSZPw9a3lT95Jk_D1reYJHLJmFQrcIODj6I2CBIT1VPwYjfKkp1oAzy0Rs3DTG&_nc_ohc=q77MIEIwNS0AX_8vplb&_nc_ht=scontent-gig2-1.xx&oh=00_AfAeTIZC3ffxmJ7_FXuABjvELjuDelbEnwewg4_Ttq87Ww&oe=63E249D5" alt=""></figure>
+                <h5>Bem Vindo</h5>
+                <h2> Nathan </h2>
+            </header>
+            
+            <nav>
+                <a routerLink="/books"> <icon name="books"></icon> Coleções </a>
+                <a> Salvos </a>
+                <a> Perfil </a>
+                <a> Logof </a>
+            </nav>
+        </aside>
+    </mat-drawer>
+  
+    <section>
+        <router-outlet></router-outlet>
+    </section>
+</mat-drawer-container>

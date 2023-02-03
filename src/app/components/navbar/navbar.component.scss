@@ -1,0 +1,109 @@
+@import '../../../styles/animations.scss';
+
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  z-index: 99;
+
+  &.mat-toolbar-single-row {
+    height: 60px;
+  }
+
+  strong {
+    color: var(--text-primary);
+  }
+}
+
+.navbar_left {
+  width: 100%;
+  height: 100vh;
+  padding-top: 20px;
+  
+  .options {
+    @include move_to_left;
+
+    aside {
+      width: 230px;
+      height: 100%;
+      padding: 20px 0 20px 0 ;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px 0;
+
+      header {
+        width: 90%;
+        border-radius: 0 15px 15px 0;
+        background: var(--secund-color);
+        padding: 20px 5px 20px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 0;
+
+        figure{
+          width: 80px;
+          height: 80px;
+          margin-bottom: 20px;
+          
+          img{
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            object-fit: cover;
+            box-shadow: 2px 2px 8px var(--color-shadow);
+          }
+        }
+      }
+
+      nav {
+        width: 90%;
+        margin: 0;
+        height: 100%;
+        border-radius: 0 15px 15px 0;
+        background: var(--secund-color);
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0 15px;
+          padding: 10px;
+          border-radius: 20px;
+          text-decoration: none;
+          color: var(--text-primary);
+          transition: all .2s;
+
+          &:hover{
+            transition: all .2s;
+            background: var(--select-color);
+            cursor: pointer;
+            padding-left: 30px;
+          }
+
+          &:last-of-type{
+            margin-top: auto;
+
+            &:hover{
+              background: transparent !important;
+              cursor: pointer;
+              padding-left: 20px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section{
+    width: 95%;
+    margin: 0 auto;
+  }
+}

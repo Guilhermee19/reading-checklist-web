@@ -1,0 +1,33 @@
+.fa-spin {
+    animation: fa-spin 2s infinite;
+}
+@keyframes fa-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@mixin transition {
+    animation: card_start 2s cubic-bezier(0.25, 0.4, 0.55, 1.4); 
+
+    @keyframes card_start {
+        0%{
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    }
+}
+
+@mixin move_to_left {
+    animation: a_move_to_left 1.5s cubic-bezier(0.7, 0, 0.7, 1.5); 
+
+    @keyframes a_move_to_left {
+        0%{
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
