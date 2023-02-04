@@ -11,12 +11,12 @@
 }
 
 @mixin transition {
-    animation: card_start 2s cubic-bezier(0.25, 0.4, 0.55, 1.4); 
+    animation: card_start 2s alternate; 
 
     @keyframes card_start {
         0%{
             opacity: 0;
-            transform: scale(0.2);
+            transform: translateY(-50%);
         }
     }
 }

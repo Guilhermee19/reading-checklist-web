@@ -1,53 +1,50 @@
-main{
-    padding-bottom: 20px;
-    header{
+main {
+  padding-bottom: 20px;
+  header { }
 
+  section {
+    width: 100%;
+    padding: 15px;
+    background: var(--select-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
     }
 
-    section{
+    @media screen and (max-width: 850px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 690px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 550px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .books {
+      width: 100%;
+
+      img {
         width: 100%;
-        padding: 15px;
-        background: var(--select-color);
-        border-radius: 10px; 
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 20px;
-        
-        @media screen and (max-width: 1200px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
+        aspect-ratio: 2/3;
+        border-radius: 8px;
+        box-shadow: 2px 2px 8px var(--color-shadow);
+        transform: scale(0.95);
+        transition: all 0.2s;
 
-        @media screen and (max-width: 850px) {
-            grid-template-columns: repeat(3, 1fr);
+        &:hover {
+          transform: scale(1) rotate(1deg);
+          box-shadow: 3px 3px 10px var(--color-shadow);
+          transition: all 0.2s;
+          cursor: pointer;
         }
-
-        @media screen and (max-width: 690px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media screen and (max-width: 550px) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        .books{
-            width: 100%;
-
-            img{
-                width: 100%;
-                aspect-ratio: 2/3;
-                border-radius: 8px;
-                box-shadow: 2px 2px 8px var(--color-shadow);
-                transform: scale(.95);
-                transition: all .2s;
-                
-                &:hover{
-                    transform: scale(1) rotate(1deg);
-                    box-shadow: 3px 3px 10px var(--color-shadow);
-                    transition: all .2s;
-                    cursor: pointer;
-                }
-            }
-        
-        }
+      }
     }
+  }
 }

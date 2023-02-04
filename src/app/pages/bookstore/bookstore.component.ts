@@ -1,7 +1,7 @@
 import { MatDialog } from '@angular/material/dialog';
+import { Component } from '@angular/core';
 import { BookstoreFilter } from '../../model/bookstore';
 import { BookstoreService } from '../../services/bookstore.service';
-import { Component, OnInit } from '@angular/core';
 import { Timeout } from 'src/app/model/utils';
 import { DetailBookComponent } from 'src/app/popups/detail-book/detail-book.component';
 
@@ -10,7 +10,7 @@ import { DetailBookComponent } from 'src/app/popups/detail-book/detail-book.comp
   templateUrl: './bookstore.component.html',
   styleUrls: ['./bookstore.component.scss']
 })
-export class BookstoreComponent implements OnInit {
+export class BookstoreComponent {
 
   constructor(
     private bookstoreService: BookstoreService,
@@ -18,7 +18,6 @@ export class BookstoreComponent implements OnInit {
   ) { }
 
   list_books: any = []
-
 
   filter: BookstoreFilter = {
     q: 'Marvel',
@@ -28,7 +27,6 @@ export class BookstoreComponent implements OnInit {
   }
 
   searchTimeout: Timeout;
-
 
   ngOnInit(): void {
     this.getBooks(1);
@@ -40,7 +38,10 @@ export class BookstoreComponent implements OnInit {
       this.list_books = data.items.map((map: any) => {
 
         map['title'] = map.volumeInfo.title;
+        map['description'] = map.volumeInfo?.description;
         map['thumbnail'] = map.volumeInfo?.imageLinks?.thumbnail;
+        map['smallThumbnail'] = map.volumeInfo?.imageLinks?.smallThumbnail;
+        map['pageCount'] = map.volumeInfo?.pageCount;
 
         return map;
       });
@@ -65,15 +66,16 @@ export class BookstoreComponent implements OnInit {
   }
 
   openDialog(book: any) {
-    console.log(book);
+    let _book = Object.assign({}, book)
 
-    const dialogRef = this.dialog.open(DetailBookComponent, { 
-      data: {book: book} 
+    const dialogRef = this.dialog.open(DetailBookComponent, {
+      width: '95vw',
+      maxWidth: '760px',
+      data: _book
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      console.log(result);
     });
   }
-
 }

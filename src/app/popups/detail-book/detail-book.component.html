@@ -1,1 +1,32 @@
-<p>detail-book works!</p>
+<svg mat-dialog-close class="icon_close_modal" width="25px"
+  height="25px" viewBox="0 0 24 24" [style.fill]="'#0775FE'">
+  <path d="M0 0h24v24H0V0z" fill="none" />
+  <path [style.fill]="'#0775FE'"
+    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+</svg>
+
+<section class="card_modal">
+    <div class="card_row">
+        <img *ngIf="book?.thumbnail" [src]="book?.thumbnail" alt="" />
+        
+        <div class="info_coll">
+            <h1>{{ book.title }} <span>Pag: {{ book.pageCount }}</span> </h1>
+            <p>{{ book.description }}</p>
+            
+            <div class="card_row">
+                <div class="card_input">
+                    <label for="pages"> Numero de paginas </label>
+                    <input id="pages" type="text" matInput [(ngModel)]="obj_book.count_pages">
+                </div>
+    
+                <div class="card_input">
+                    <label for="pages"> Em quantos dias pretende ler  </label>
+                    <input id="pages" type="text" matInput [(ngModel)]="obj_book.reading_goal">
+                </div>
+            </div>
+              
+            <button mat-button class="main"> Adicionar a Coleção </button>
+        </div>
+
+    </div>
+</section>

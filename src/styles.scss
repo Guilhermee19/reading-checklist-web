@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import './styles/animations.scss';
+@import './styles/mat-dialog.scss';
+@import './styles/inputs.scss';
 
 *{
     margin: 0;
@@ -44,5 +46,17 @@ main{
             color: var(--text-primary);
             margin: 0;
         }
+    }
+}
+
+button{
+    &.white{
+        background: white !important;
+        color: black !important;
+    }
+
+    &.main{
+        background: gray !important;
+        color: black !important;
     }
 }

@@ -1,0 +1,56 @@
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.card_modal {
+  background: transparent;
+
+  .card_row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px var(--color-shadow);
+    }
+
+    .info_coll{
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h1 {
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    
+        span{
+          font-size: 12px;
+        }
+      }
+
+      p{
+        font-size: 14px;
+        max-height: 150px;
+        padding-right: 10px;
+        overflow-y: auto;
+      }
+
+      .main{
+        margin-top: auto;
+      }
+    }
+  }
+
+  .white{
+    width: 100%;
+    margin-top: 20px;
+  }
+}
