@@ -45,11 +45,7 @@ export class BookstoreComponent {
 
         return map;
       });
-
-      console.log(this.list_books);
-
-
-      console.log(data);
+      
     }, error => {
       console.error(error);
     })

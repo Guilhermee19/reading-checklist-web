@@ -1,11 +1,249 @@
 {
-  "books": [
+  "colections_books": [
     {
       "id": 1,
-      "title":"",
-      "cover_image":"",
-      "count_pages": "",
-      "reading_goal":""
+      "status": "TO_READ",
+      "book_title": "",
+      "book_thumbnail": "",
+      "book_count_pages": 0,
+      "reading_goal": "30",
+      "date_crate": "2023-02-04T22:55:04.067Z",
+      "checklist": [
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "",
+          "pages": "",
+          "check": false
+        }
+      ],
+      "hour_alarm_reading": "",
+      "title": "Demolidor: A Queda de Murdock",
+      "count_pages": 191,
+      "thumbnail": "http://books.google.com/books/content?id=NMeEEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+      "id": 2,
+      "status": "TO_READ",
+      "book_title": "",
+      "book_thumbnail": "",
+      "book_count_pages": 0,
+      "reading_goal": "5",
+      "date_crate": "2023-02-04T22:56:51.961Z",
+      "checklist": [
+        {
+          "data": "2023-02-04T22:56:56.164Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "2023-02-04T22:56:56.165Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "2023-02-04T22:56:56.166Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "2023-02-04T22:56:56.167Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "2023-02-04T22:56:56.168Z",
+          "pages": "",
+          "check": false
+        }
+      ],
+      "hour_alarm_reading": "",
+      "title": "Marvel Comics into Film",
+      "count_pages": 281,
+      "thumbnail": "http://books.google.com/books/content?id=V6_uCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+      "id": 3,
+      "status": "TO_READ",
+      "book_title": "",
+      "book_thumbnail": "",
+      "book_count_pages": 0,
+      "reading_goal": "5",
+      "date_crate": "2023-02-04T22:58:12.820Z",
+      "checklist": [
+        {
+          "data": "1970-01-01T00:00:00.004Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "1970-01-01T00:00:00.005Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "1970-01-01T00:00:00.006Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "1970-01-01T00:00:00.007Z",
+          "pages": "",
+          "check": false
+        },
+        {
+          "data": "1970-01-01T00:00:00.008Z",
+          "pages": "",
+          "check": false
+        }
+      ],
+      "hour_alarm_reading": "",
+      "title": "Marvel Teens: Ms. Marvel",
+      "count_pages": 260,
+      "thumbnail": "http://books.google.com/books/content?id=DbdmEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
     }
   ]
 }

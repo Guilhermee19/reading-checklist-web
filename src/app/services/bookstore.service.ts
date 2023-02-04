@@ -38,4 +38,29 @@ export class BookstoreService {
     return this.http.get<any>(environment.path + `books/v1/volumes`, options)
   }
 
+  getColection(): Observable<any> {
+   
+    return this.http.get<any>(`http://localhost:3000/colections_books`)
+  }
+
+  getColectionBook(id: number): Observable<any> {
+   
+    return this.http.get<any>(`http://localhost:3000/colections_books/${id}/`)
+  }
+
+  postColection(colections: any): Observable<any> {
+   
+    return this.http.post<any>(`http://localhost:3000/colections_books/`, colections)
+  }
+
+  patchColection(colections: any): Observable<any> {
+   
+    return this.http.patch<any>(`http://localhost:3000/colections_books/${colections.id}`, colections)
+  }
+
+  deletColection(colections: any): Observable<any> {
+   
+    return this.http.delete<any>(`http://localhost:3000/colections_books/${colections.id}`)
+  }
+
 }

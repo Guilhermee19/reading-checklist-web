@@ -16,6 +16,8 @@ import { BookstoreComponent } from './pages/bookstore/bookstore.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { IconComponent } from './components/Icons/icons-svg.component';
 import { DetailBookComponent } from './popups/detail-book/detail-book.component';
+import { ColectionComponent } from './pages/colection/colection.component';
+import { BookComponent } from './pages/colection/book/book.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { DetailBookComponent } from './popups/detail-book/detail-book.component'
     NavbarComponent,
     IconComponent,
     DetailBookComponent,
+    ColectionComponent,
+    BookComponent,
   ],
   imports: [
     BrowserModule,
