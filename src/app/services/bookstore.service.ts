@@ -17,7 +17,7 @@ export class BookstoreService {
     let options = {
       params: new HttpParams()
         .set("startIndex", page)
-        // .set("maxResults", 18)
+        .set("maxResults", 100)
         .set("key", environment.apy_key),
 
       headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' })
