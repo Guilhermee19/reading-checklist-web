@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nathan"
+    },
+    {
+      "id": 1,
+      "name": "Guilherme"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "user": 1,
+      "title":"",
+      "cover_image":"",
+      "author":""
+    }
+  ]
+}

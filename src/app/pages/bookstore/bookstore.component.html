@@ -1,0 +1,14 @@
+<main>
+    <header> 
+        <h1> Biblioteca </h1>
+        <input matInput type="text" [(ngModel)]="filter.q"
+        (ngModelChange)="handleInputChange($event)">
+    </header>
+
+    <section>
+        <div class="books" *ngFor="let book of list_books">
+            <img *ngIf="book?.thumbnail" [src]="book?.thumbnail" alt="">
+            <img *ngIf="!book?.thumbnail" style="object-fit: cover;" src="https://livrariacultura.vteximg.com.br/arquivos/ids/32117378-475-475/2112112581.png?v=637579308671630000" alt="">
+        </div>
+    </section>
+</main>

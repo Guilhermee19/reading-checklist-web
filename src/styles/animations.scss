@@ -16,7 +16,7 @@
     @keyframes card_start {
         0%{
             opacity: 0;
-            transform: translateY(-50px);
+            transform: scale(0.2);
         }
     }
 }

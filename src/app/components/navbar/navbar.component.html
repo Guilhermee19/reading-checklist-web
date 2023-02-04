@@ -4,7 +4,7 @@
     </strong>
 </mat-toolbar> -->
 
-<mat-drawer-container class="navbar_left">
+<mat-drawer-container class="navbar_left" [ngClass]="{'close': drawer._animationState != 'open'}">
     <mat-drawer #drawer class="options" mode="side" [opened]="true">
         <aside>
             <header>
@@ -14,12 +14,12 @@
             </header>
             
             <nav>
-                <a routerLink="/books"> 
-                    <icon name="books"></icon> Coleções 
+                <a routerLink="/bookstore"> 
+                    <icon name="books"></icon> <span>Biblioteca</span> 
                 </a>
-                <a> Salvos </a>
-                <a> Perfil </a>
-                <a> Logof </a>
+                <a> <span>Salvos</span> </a>
+                <a> <span>Perfil</span> </a>
+                <a> <span>Logof</span> </a>
             </nav>
         </aside>
     </mat-drawer>

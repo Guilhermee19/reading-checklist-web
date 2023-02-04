@@ -17,11 +17,49 @@ mat-toolbar {
   }
 }
 
+.mat-drawer {
+  visibility: initial !important;
+  transform: translate3d(-60%,0,0);
+}
+
+:host ::ng-deep .mat-drawer-content {
+  margin-left: 80px;
+}
+
 .navbar_left {
   width: 100%;
   height: 100vh;
   padding-top: 20px;
-  
+
+  // &.close{
+  //   .options{
+  //     aside{
+  //       // width: 90px;
+  //       padding-left: 60%;
+  //       header{
+  //         figure{
+  //           width: 50px;
+  //           height: 50px;
+  //           margin: 0;
+  //         }
+  //         h5{
+  //           display: none;
+  //         }
+  //         h2{
+  //           display: none;
+  //         }
+  //       }
+  //       nav{
+  //         a{
+  //           span{
+  //             display: none
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
   .options {
     @include move_to_left;
 
@@ -29,11 +67,12 @@ mat-toolbar {
       width: 230px;
       height: 100%;
       padding: 20px 0 20px 0 ;
-
+      
       display: flex;
       flex-direction: column;
       gap: 20px 0;
-
+      transition: all .2s;
+      
       header {
         width: 90%;
         border-radius: 0 15px 15px 0;
@@ -44,11 +83,12 @@ mat-toolbar {
         justify-content: center;
         align-items: center;
         gap: 10px 0;
-
+        
         figure{
           width: 80px;
           height: 80px;
           margin-bottom: 20px;
+          transition: all .2s;
           
           img{
             width: 100%;

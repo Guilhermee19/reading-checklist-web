@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  path: 'https://www.googleapis.com/',
+  apy_key: 'AIzaSyBnkdOkQKUaxpnPXCX8sVneCcphLIeqsUg'
 };
