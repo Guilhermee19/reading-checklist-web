@@ -1,7 +1,9 @@
+import { MatDialog } from '@angular/material/dialog';
 import { BookstoreFilter } from '../../model/bookstore';
 import { BookstoreService } from '../../services/bookstore.service';
 import { Component, OnInit } from '@angular/core';
 import { Timeout } from 'src/app/model/utils';
+import { DetailBookComponent } from 'src/app/popups/detail-book/detail-book.component';
 
 @Component({
   selector: 'app-bookstore',
@@ -11,7 +13,8 @@ import { Timeout } from 'src/app/model/utils';
 export class BookstoreComponent implements OnInit {
 
   constructor(
-    private bookstoreService: BookstoreService
+    private bookstoreService: BookstoreService,
+    public dialog: MatDialog
   ) { }
 
   list_books: any = []
@@ -59,6 +62,18 @@ export class BookstoreComponent implements OnInit {
       this.filter.q = e;
       this.getBooks(1);
     }, 500);
+  }
+
+  openDialog(book: any) {
+    console.log(book);
+
+    const dialogRef = this.dialog.open(DetailBookComponent, { 
+      data: {book: book} 
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }
