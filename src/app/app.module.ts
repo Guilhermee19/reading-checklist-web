@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,6 +18,7 @@ import { IconComponent } from './components/Icons/icons-svg.component';
 import { DetailBookComponent } from './popups/detail-book/detail-book.component';
 import { ColectionComponent } from './pages/colection/colection.component';
 import { BookComponent } from './pages/colection/book/book.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,13 @@ import { BookComponent } from './pages/colection/book/book.component';
     MatSidenavModule,
     MatToolbarModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
